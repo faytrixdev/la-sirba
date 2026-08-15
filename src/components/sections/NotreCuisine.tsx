@@ -1,5 +1,5 @@
+import Image from "next/image";
 import { SectionHeader } from "@/components/ui/SectionHeader";
-import { PlaceholderImage } from "@/components/ui/PlaceholderImage";
 import { Button } from "@/components/ui/Button";
 import { services } from "@/data/services";
 
@@ -18,12 +18,13 @@ export function NotreCuisine() {
               key={service.id}
               className="group overflow-hidden rounded-lg bg-white shadow-sm transition-shadow hover:shadow-md"
             >
-              <div className="relative overflow-hidden">
-                <PlaceholderImage
-                  variant="food"
-                  aspect="video"
-                  label={service.title}
-                  className="w-full transition-transform duration-500 group-hover:scale-105"
+              <div className="relative aspect-video overflow-hidden">
+                <Image
+                  src={service.image}
+                  alt={service.title}
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  sizes="(max-width: 768px) 100vw, 33vw"
                 />
               </div>
               <div className="p-6">
