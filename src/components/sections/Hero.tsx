@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 import { contactInfo } from "@/data/contact";
 
@@ -43,15 +44,14 @@ export function Hero() {
             >
               Découvrir la carte
             </Button>
-            <Button
-              variant="outline"
-              size="lg"
+            <Link
               href={`https://wa.me/${contactInfo.whatsapp.raw}?text=${encodeURIComponent("Bonjour, je souhaite réserver une table chez La Sirba.")}`}
-              external
-              className="border-white text-white hover:bg-white hover:text-brun"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center rounded-md border-2 border-white px-8 py-4 text-lg font-medium text-white transition-colors duration-300 hover:bg-white hover:text-brun focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
             >
               Réserver une table
-            </Button>
+            </Link>
           </div>
         </div>
       </div>
