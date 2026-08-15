@@ -2,15 +2,14 @@ import { SectionHeader } from "@/components/ui/SectionHeader";
 import { PlaceholderImage } from "@/components/ui/PlaceholderImage";
 import { formatPrice } from "@/lib/utils";
 import { Button } from "@/components/ui/Button";
-import { menuCategories } from "@/data/menu";
 
 const highlights = [
-  { name: "Poulet braisé / Kiparé", price: 7000, category: "grillades" },
-  { name: "Brochette de filet", price: 5000, category: "grillades" },
-  { name: "Choukouya de mouton", price: 7000, category: "grillades" },
-  { name: "Poulet", price: 8000, category: "soupes" },
-  { name: "Salade du chef", price: 4500, category: "salades" },
-  { name: "Foutou igname", price: 1000, category: "accompagnements" },
+  { name: "Foutou sauce graine", price: 5000, category: "Spécialité" },
+  { name: "Choukouya de bœuf", price: 5000, category: "Grillade" },
+  { name: "Attiéké poisson braisé", price: 6000, category: "Poisson" },
+  { name: "Placali sauce kopè", price: 5000, category: "Spécialité" },
+  { name: "Brochette de filet de bœuf", price: 5000, category: "Grillade" },
+  { name: "Ailes de poulet", price: 4000, category: "Grillade" },
 ];
 
 export function Incontournables() {
