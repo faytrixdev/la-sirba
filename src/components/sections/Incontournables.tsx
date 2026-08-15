@@ -4,12 +4,12 @@ import { formatPrice } from "@/lib/utils";
 import { Button } from "@/components/ui/Button";
 
 const highlights = [
-  { name: "Foutou sauce graine", price: 5000, category: "Spécialité" },
+  { name: "Foutou sauce graine", price: 4000, category: "Spécialité" },
   { name: "Choukouya de bœuf", price: 5000, category: "Grillade" },
-  { name: "Attiéké poisson braisé", price: 6000, category: "Poisson" },
-  { name: "Placali sauce kopè", price: 5000, category: "Spécialité" },
-  { name: "Brochette de filet de bœuf", price: 5000, category: "Grillade" },
-  { name: "Ailes de poulet", price: 4000, category: "Grillade" },
+  { name: "Attiéké poisson braisé", price: 7000, category: "Poisson" },
+  { name: "Placali sauce kopè", price: 4000, category: "Spécialité" },
+  { name: "Brochéttes de filet de bœuf", price: 5000, category: "Grillade" },
+  { name: "Ailes de poulet", price: 4500, category: "Grillade" },
 ];
 
 export function Incontournables() {
