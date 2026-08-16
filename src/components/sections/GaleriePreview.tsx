@@ -1,14 +1,13 @@
+import Image from "next/image";
 import { SectionHeader } from "@/components/ui/SectionHeader";
-import { PlaceholderImage } from "@/components/ui/PlaceholderImage";
 import { Button } from "@/components/ui/Button";
 
 const galleryItems = [
-  { label: "Plats traditionnels", variant: "food" as const, aspect: "video" as const },
-  { label: "Grillades", variant: "food" as const, aspect: "square" as const },
-  { label: "Ambiance restaurant", variant: "ambiance" as const, aspect: "video" as const },
-  { label: "La cheffe au travail", variant: "chef" as const, aspect: "portrait" as const },
-  { label: "Événement traiteur", variant: "event" as const, aspect: "video" as const },
-  { label: "Cuisine africaine", variant: "food" as const, aspect: "square" as const },
+  { label: "Plats traditionnels", image: "/images/plats-traditionnels.jpg" },
+  { label: "Grillades", image: "/images/grillades.jpg" },
+  { label: "Ambiance restaurant", image: "/images/ambiance-restaurant.jpg" },
+  { label: "Événement traiteur", image: "/images/evenement-traiteur.jpg" },
+  { label: "Cuisine africaine", image: "/images/cuisine-africaine.jpg" },
 ];
 
 export function GaleriePreview() {
@@ -24,16 +23,19 @@ export function GaleriePreview() {
           {galleryItems.map((item, index) => (
             <div
               key={index}
-              className={`group overflow-hidden rounded-lg ${
+              className={`group relative overflow-hidden rounded-lg ${
                 index === 0 ? "col-span-2 md:col-span-1" : ""
               }`}
             >
-              <PlaceholderImage
-                variant={item.variant}
-                aspect={item.aspect}
-                label={item.label}
-                className="w-full transition-transform duration-500 group-hover:scale-105"
-              />
+              <div className="relative aspect-video overflow-hidden">
+                <Image
+                  src={item.image}
+                  alt={item.label}
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 33vw"
+                />
+              </div>
             </div>
           ))}
         </div>
