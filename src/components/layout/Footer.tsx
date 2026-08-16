@@ -1,7 +1,7 @@
 import Link from "next/link";
+import Image from "next/image";
 import { footerNav } from "@/data/navigation";
 import { contactInfo } from "@/data/contact";
-import { formatPrice } from "@/lib/utils";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -12,9 +12,13 @@ export function Footer() {
         <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-4">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <h3 className="font-serif text-2xl font-bold text-white">
-              La Sirba
-            </h3>
+            <Image
+              src="/images/logo.jpeg"
+              alt="La Sirba"
+              width={140}
+              height={45}
+              className="h-10 w-auto"
+            />
             <p className="mt-2 text-sm italic text-ocre">
               {contactInfo.slogan}
             </p>

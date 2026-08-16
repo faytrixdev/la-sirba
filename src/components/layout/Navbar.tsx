@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { mainNav } from "@/data/navigation";
 import { contactInfo } from "@/data/contact";
@@ -44,13 +45,14 @@ export function Navbar() {
         <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 md:px-6 md:py-4">
           {/* Logo */}
           <Link href="/" className="relative z-10">
-            <span
-              className={`font-serif text-xl font-bold md:text-2xl transition-colors duration-300 ${
-                scrolled ? "text-brun" : "text-white"
-              }`}
-            >
-              La Sirba
-            </span>
+            <Image
+              src="/images/logo.jpeg"
+              alt="La Sirba"
+              width={120}
+              height={40}
+              className="h-8 w-auto md:h-10"
+              priority
+            />
           </Link>
 
           {/* Desktop Nav */}
