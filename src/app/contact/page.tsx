@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <div className="pt-20">
+    <div style={{ paddingTop: "72px" }}>
       {/* Header */}
       <section className="bg-brun py-12 md:py-16">
         <div className="mx-auto max-w-7xl px-4 text-center md:px-6">
