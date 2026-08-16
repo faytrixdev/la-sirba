@@ -13,11 +13,11 @@ export function Footer() {
           {/* Brand */}
           <div className="lg:col-span-1">
             <Image
-              src="/images/logo.jpeg"
+              src="/images/logo.png"
               alt="La Sirba"
-              width={140}
-              height={45}
-              className="h-10 w-auto"
+              width={180}
+              height={60}
+              className="h-14 w-auto"
             />
             <p className="mt-2 text-sm italic text-ocre">
               {contactInfo.slogan}

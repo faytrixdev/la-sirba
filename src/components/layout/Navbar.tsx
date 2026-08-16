@@ -46,11 +46,11 @@ export function Navbar() {
           {/* Logo */}
           <Link href="/" className="relative z-10">
             <Image
-              src="/images/logo.jpeg"
+              src="/images/logo.png"
               alt="La Sirba"
-              width={120}
-              height={40}
-              className="h-8 w-auto md:h-10"
+              width={160}
+              height={55}
+              className="h-12 w-auto md:h-14"
               priority
             />
           </Link>
