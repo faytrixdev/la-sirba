@@ -164,7 +164,7 @@ export default function CartePage() {
             <Button
               variant="primary"
               size="lg"
-              href={`https://wa.me/${contactInfo.whatsapp.raw}?text=${encodeURIComponent("Bonjour, je souhaite commander chez La Sirba.")}`}
+              href={`https://wa.me/${contactInfo.whatsapp.raw}?text=${encodeURIComponent("Bonjour La Sirba ! Je souhaite passer une commande. Merci !")}`}
               external
             >
               Commander via WhatsApp

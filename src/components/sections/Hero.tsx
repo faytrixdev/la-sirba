@@ -45,7 +45,7 @@ export function Hero() {
               Découvrir la carte
             </Button>
             <Link
-              href={`https://wa.me/${contactInfo.whatsapp.raw}?text=${encodeURIComponent("Bonjour, je souhaite réserver une table chez La Sirba.")}`}
+              href={`https://wa.me/${contactInfo.whatsapp.raw}?text=${encodeURIComponent("Bonjour La Sirba ! Je souhaite réserver une table. Merci !")}`}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center rounded-md border-2 border-white px-8 py-4 text-lg font-medium text-white transition-colors duration-300 hover:bg-white hover:text-brun focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"

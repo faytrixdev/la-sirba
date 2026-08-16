@@ -3,7 +3,7 @@
 import { contactInfo } from "@/data/contact";
 
 export function WhatsAppButton() {
-  const message = "Bonjour, je souhaite contacter La Sirba.";
+  const message = "Bonjour La Sirba ! J'ai une question. Merci !";
   const url = `https://wa.me/${contactInfo.whatsapp.raw}?text=${encodeURIComponent(message)}`;
 
   return (

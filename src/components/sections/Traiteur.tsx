@@ -49,7 +49,7 @@ export function Traiteur() {
               <Button
                 variant="secondary"
                 size="lg"
-                href={`https://wa.me/${contactInfo.whatsapp.raw}?text=${encodeURIComponent("Bonjour, je souhaite discuter d'un événement traiteur avec La Sirba.")}`}
+                href={`https://wa.me/${contactInfo.whatsapp.raw}?text=${encodeURIComponent("Bonjour La Sirba ! Je souhaite organiser un événement avec votre service traiteur. Merci !")}`}
                 external
               >
                 Parler de votre événement

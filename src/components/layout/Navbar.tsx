@@ -78,7 +78,7 @@ export function Navbar() {
             <Button
               variant={scrolled ? "primary" : "secondary"}
               size="sm"
-              href={`https://wa.me/${contactInfo.whatsapp.raw}?text=${encodeURIComponent("Bonjour, je souhaite réserver une table chez La Sirba.")}`}
+              href={`https://wa.me/${contactInfo.whatsapp.raw}?text=${encodeURIComponent("Bonjour La Sirba ! Je souhaite réserver une table. Merci !")}`}
               external
             >
               Réserver
@@ -145,7 +145,7 @@ export function Navbar() {
             <Button
               variant="primary"
               size="lg"
-              href={`https://wa.me/${contactInfo.whatsapp.raw}?text=${encodeURIComponent("Bonjour, je souhaite réserver une table chez La Sirba.")}`}
+              href={`https://wa.me/${contactInfo.whatsapp.raw}?text=${encodeURIComponent("Bonjour La Sirba ! Je souhaite réserver une table. Merci !")}`}
               external
               onClick={() => setIsOpen(false)}
             >

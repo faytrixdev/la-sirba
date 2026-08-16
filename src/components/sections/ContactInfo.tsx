@@ -113,7 +113,7 @@ export function ContactInfo() {
           <Button
             variant="primary"
             size="lg"
-            href={`https://wa.me/${contactInfo.whatsapp.raw}?text=${encodeURIComponent("Bonjour, je souhaite réserver une table chez La Sirba.")}`}
+            href={`https://wa.me/${contactInfo.whatsapp.raw}?text=${encodeURIComponent("Bonjour La Sirba ! Je souhaite réserver une table. Merci !")}`}
             external
           >
             Réserver une table
@@ -121,7 +121,7 @@ export function ContactInfo() {
           <Button
             variant="outline"
             size="lg"
-            href={`https://wa.me/${contactInfo.whatsapp.raw}?text=${encodeURIComponent("Bonjour, je souhaite contacter La Sirba.")}`}
+            href={`https://wa.me/${contactInfo.whatsapp.raw}?text=${encodeURIComponent("Bonjour La Sirba ! J'ai une question. Merci !")}`}
             external
           >
             Nous contacter
