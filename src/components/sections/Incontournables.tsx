@@ -1,15 +1,15 @@
+import Image from "next/image";
 import { SectionHeader } from "@/components/ui/SectionHeader";
-import { PlaceholderImage } from "@/components/ui/PlaceholderImage";
 import { formatPrice } from "@/lib/utils";
 import { Button } from "@/components/ui/Button";
 
 const highlights = [
-  { name: "Foutou sauce graine", price: 4000, category: "Spécialité" },
-  { name: "Choukouya de bœuf", price: 5000, category: "Grillade" },
-  { name: "Attiéké poisson braisé", price: 7000, category: "Poisson" },
-  { name: "Placali sauce kopè", price: 4000, category: "Spécialité" },
-  { name: "Brochéttes de filet de bœuf", price: 5000, category: "Grillade" },
-  { name: "Ailes de poulet", price: 4500, category: "Grillade" },
+  { name: "Foutou sauce graine", price: 4000, category: "Spécialité", image: "/images/foutou-sauce-graine.jpg" },
+  { name: "Choukouya de bœuf", price: 5000, category: "Grillade", image: "/images/choukouya-de-boeuf.jpeg" },
+  { name: "Attiéké poisson braisé", price: 7000, category: "Poisson", image: "/images/attieque-poisson-braise.jpg" },
+  { name: "Placali sauce kopè", price: 4000, category: "Spécialité", image: "/images/placali-sauce-kope.jpg" },
+  { name: "Brochéttes de filet de bœuf", price: 5000, category: "Grillade", image: "/images/brochette-de-filet-de-boeuf.jpg" },
+  { name: "Ailes de poulet", price: 4500, category: "Grillade", image: "/images/ailes-de-poulet.jpg" },
 ];
 
 export function Incontournables() {
@@ -22,17 +22,18 @@ export function Incontournables() {
         />
 
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {highlights.map((item, index) => (
+          {highlights.map((item) => (
             <div
               key={item.name}
               className="group overflow-hidden rounded-lg bg-white shadow-sm transition-all hover:shadow-md"
             >
-              <div className="relative overflow-hidden">
-                <PlaceholderImage
-                  variant="food"
-                  aspect="video"
-                  label={item.name}
-                  className="w-full transition-transform duration-500 group-hover:scale-105"
+              <div className="relative aspect-video overflow-hidden">
+                <Image
+                  src={item.image}
+                  alt={item.name}
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
               </div>
               <div className="flex items-center justify-between p-4">
