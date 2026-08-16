@@ -33,6 +33,9 @@ export const metadata: Metadata = {
     "gastronomie africaine",
     "restaurant Burkina Faso",
   ],
+  icons: {
+    icon: "/images/favicon.png",
+  },
   openGraph: {
     title: "La Sirba — Nos racines dans l'assiette",
     description:
