@@ -8,18 +8,18 @@ export const metadata: Metadata = {
 };
 
 const galleryImages = [
-  { label: "Plats traditionnels", image: "/images/plats-traditionnels.jpg" },
-  { label: "Grillades", image: "/images/grillades.jpg" },
-  { label: "Ambiance restaurant", image: "/images/ambiance-restaurant.jpg" },
-  { label: "Spécialités africaines", image: "/images/specialites-africaines.jpg" },
-  { label: "Événement traiteur", image: "/images/evenement-traiteur.jpg" },
-  { label: "Cuisine africaine", image: "/images/cuisine-africaine.jpg" },
-  { label: "Cuisine classique", image: "/images/cuisine-classique.jpg" },
-  { label: "Foutou sauce graine", image: "/images/foutou-sauce-graine.jpg" },
-  { label: "Choukouya de bœuf", image: "/images/choukouya-de-boeuf.jpeg" },
-  { label: "Brochette de filet", image: "/images/brochette-de-filet-de-boeuf.jpg" },
-  { label: "Attiéké poisson braisé", image: "/images/attieque-poisson-braise.jpg" },
-  { label: "Ailes de poulet", image: "/images/ailes-de-poulet.jpg" },
+  { label: "Plats traditionnels", image: "/images/plats-traditionnels.jpg", span: "large" },
+  { label: "Grillades", image: "/images/grillades.jpg", span: "normal" },
+  { label: "Ambiance restaurant", image: "/images/ambiance-restaurant.jpg", span: "normal" },
+  { label: "Spécialités africaines", image: "/images/specialites-africaines.jpg", span: "normal" },
+  { label: "Événement traiteur", image: "/images/evenement-traiteur.jpg", span: "large" },
+  { label: "Cuisine africaine", image: "/images/cuisine-africaine.jpg", span: "normal" },
+  { label: "Cuisine classique", image: "/images/cuisine-classique.jpg", span: "normal" },
+  { label: "Foutou sauce graine", image: "/images/foutou-sauce-graine.jpg", span: "normal" },
+  { label: "Choukouya de bœuf", image: "/images/choukouya-de-boeuf.jpeg", span: "large" },
+  { label: "Brochette de filet", image: "/images/brochette-de-filet-de-boeuf.jpg", span: "normal" },
+  { label: "Attiéké poisson braisé", image: "/images/attieque-poisson-braise.jpg", span: "normal" },
+  { label: "Ailes de poulet", image: "/images/ailes-de-poulet.jpg", span: "normal" },
 ];
 
 export default function GaleriePage() {
@@ -41,20 +41,41 @@ export default function GaleriePage() {
       {/* Gallery Grid */}
       <section className="py-10 md:py-16">
         <div className="mx-auto max-w-7xl px-4 md:px-6">
-          <div className="columns-1 gap-4 sm:columns-2 lg:columns-3">
+          {/* Mobile: simple grid */}
+          <div className="grid grid-cols-2 gap-3 md:hidden">
             {galleryImages.map((img, index) => (
               <div
                 key={index}
-                className="mb-4 break-inside-avoid overflow-hidden rounded-lg"
+                className="overflow-hidden rounded-lg"
               >
-                <div className="relative overflow-hidden">
+                <Image
+                  src={img.image}
+                  alt={img.label}
+                  width={800}
+                  height={600}
+                  className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
+                  sizes="50vw"
+                />
+              </div>
+            ))}
+          </div>
+
+          {/* Desktop: editorial grid */}
+          <div className="hidden md:grid md:grid-cols-3 md:gap-4 lg:grid-cols-4">
+            {galleryImages.map((img, index) => (
+              <div
+                key={index}
+                className={`overflow-hidden rounded-lg ${
+                  img.span === "large" ? "md:col-span-2" : ""
+                }`}
+              >
+                <div className={`relative overflow-hidden ${img.span === "large" ? "aspect-[16/9]" : "aspect-square"}`}>
                   <Image
                     src={img.image}
                     alt={img.label}
-                    width={800}
-                    height={600}
-                    className="w-full transition-transform duration-500 hover:scale-105"
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    fill
+                    className="object-cover transition-transform duration-500 hover:scale-105"
+                    sizes={img.span === "large" ? "(max-width: 1024px) 66vw, 50vw" : "(max-width: 1024px) 33vw, 25vw"}
                   />
                 </div>
               </div>
