@@ -10,7 +10,7 @@ export function Hero() {
       <div className="absolute inset-0">
         <Image
           src="/images/hero-image.png"
-          alt="La Sirba — Spécialités africaines, grillades et cuisine classique"
+          alt="La Sirba - Spécialités africaines, grillades et cuisine classique"
           fill
           priority
           className="object-cover"

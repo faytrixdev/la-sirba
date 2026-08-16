@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Galerie",
   description:
-    "Découvrez l'univers de La Sirba en images — plats, grillades, ambiance, traiteur et événements.",
+    "Découvrez l'univers de La Sirba en images - plats, grillades, ambiance, traiteur et événements.",
 };
 
 const galleryImages = [
@@ -32,7 +32,7 @@ export default function GaleriePage() {
             Galerie
           </h1>
           <p className="mx-auto mt-3 max-w-xl text-base text-cream/80 md:text-lg">
-            Plats, grillades, ambiance, traiteur — découvrez l&apos;univers de
+            Plats, grillades, ambiance, traiteur - découvrez l&apos;univers de
             La Sirba.
           </p>
         </div>

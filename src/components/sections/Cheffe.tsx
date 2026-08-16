@@ -17,7 +17,7 @@ export function Cheffe() {
             <PlaceholderImage
               variant="chef"
               aspect="portrait"
-              label="Diallo Safiatou — Cheffe"
+              label="Diallo Safiatou - Cheffe"
               className="w-full rounded-lg"
             />
           </div>

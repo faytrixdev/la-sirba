@@ -19,11 +19,11 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   title: {
-    default: "La Sirba — Restaurant & Traiteur à Ouagadougou",
+    default: "La Sirba - Restaurant & Traiteur à Ouagadougou",
     template: "%s | La Sirba",
   },
   description:
-    "La Sirba — Restaurant à Ouagadougou. Spécialités africaines, grillades et cuisine classique. Service traiteur pour vos événements. Médaille d'or au Mondial de la Gastronomie 2025.",
+    "La Sirba - Restaurant à Ouagadougou. Spécialités africaines, grillades et cuisine classique. Service traiteur pour vos événements. Médaille d'or au Mondial de la Gastronomie 2025.",
   keywords: [
     "restaurant Ouagadougou",
     "cuisine africaine",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     icon: "/images/favicon.png",
   },
   openGraph: {
-    title: "La Sirba — Nos racines dans l'assiette",
+    title: "La Sirba - Nos racines dans l'assiette",
     description:
       "Spécialités africaines, grillades & cuisine classique. Service traiteur disponible.",
     type: "website",

@@ -2,7 +2,7 @@ export const siteConfig = {
   name: "La Sirba",
   slogan: "Nos racines dans l'assiette",
   description:
-    "La Sirba — Restaurant à Ouagadougou. Spécialités africaines, grillades et cuisine classique. Service traiteur disponible.",
+    "La Sirba - Restaurant à Ouagadougou. Spécialités africaines, grillades et cuisine classique. Service traiteur disponible.",
   url: "https://lasirba.com",
 };
 
