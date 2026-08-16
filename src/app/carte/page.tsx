@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import { menuCategories, menuOptions, type MenuCategory } from "@/data/menu";
 import { formatPrice } from "@/lib/utils";
 import { Button } from "@/components/ui/Button";
@@ -15,6 +15,17 @@ function CategoryNav({
   active: string;
   onSelect: (id: string) => void;
 }) {
+  const handleClick = useCallback(
+    (id: string) => {
+      onSelect(id);
+      const el = document.getElementById(id);
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    },
+    [onSelect]
+  );
+
   return (
     <div className="sticky top-[72px] z-30 border-b border-brun/10 bg-cream/95 backdrop-blur-sm">
       <div className="mx-auto max-w-7xl px-4 md:px-6">
@@ -22,7 +33,7 @@ function CategoryNav({
           {categories.map((cat) => (
             <button
               key={cat.id}
-              onClick={() => onSelect(cat.id)}
+              onClick={() => handleClick(cat.id)}
               className={`shrink-0 rounded-full px-4 py-2 text-sm font-medium transition-all ${
                 active === cat.id
                   ? "bg-brun text-white"
@@ -38,9 +49,15 @@ function CategoryNav({
   );
 }
 
-function MenuCategorySection({ category }: { category: MenuCategory }) {
+function MenuCategorySection({
+  category,
+  isActive,
+}: {
+  category: MenuCategory;
+  isActive: boolean;
+}) {
   return (
-    <div className="scroll-mt-32" id={category.id}>
+    <div className="scroll-mt-[120px]" id={category.id}>
       <div className="mb-6">
         <h2 className="font-serif text-2xl font-semibold text-brun md:text-3xl">
           {category.name}
@@ -103,7 +120,10 @@ export default function CartePage() {
           <div className="hidden md:block">
             {menuCategories.map((category) => (
               <div key={category.id} className="mb-12">
-                <MenuCategorySection category={category} />
+                <MenuCategorySection
+                  category={category}
+                  isActive={category.id === activeCategory}
+                />
               </div>
             ))}
           </div>
@@ -113,7 +133,11 @@ export default function CartePage() {
             {menuCategories
               .filter((cat) => cat.id === activeCategory)
               .map((category) => (
-                <MenuCategorySection key={category.id} category={category} />
+                <MenuCategorySection
+                  key={category.id}
+                  category={category}
+                  isActive={true}
+                />
               ))}
           </div>
 
