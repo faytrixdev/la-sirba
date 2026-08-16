@@ -2,21 +2,24 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { mainNav } from "@/data/navigation";
 import { contactInfo } from "@/data/contact";
 import { Button } from "@/components/ui/Button";
 
 export function Navbar() {
+  const pathname = usePathname();
+  const isHome = pathname === "/";
   const [isOpen, setIsOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
+  const [scrolled, setScrolled] = useState(!isHome);
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
+      setScrolled(!isHome || window.scrollY > 20);
     };
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [isHome]);
 
   useEffect(() => {
     if (isOpen) {
