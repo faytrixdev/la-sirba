@@ -17,7 +17,7 @@ export function Footer() {
               alt="La Sirba"
               width={180}
               height={60}
-              className="h-14 w-auto"
+              className="h-16 w-auto"
             />
             <p className="mt-2 text-sm italic text-ocre">
               {contactInfo.slogan}

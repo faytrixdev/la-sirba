@@ -42,15 +42,16 @@ export function Navbar() {
             : "bg-transparent"
         }`}
       >
-        <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 md:px-6 md:py-4">
+        <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 md:px-6" style={{ height: "72px" }}>
           {/* Logo */}
-          <Link href="/" className="relative z-10">
+          <Link href="/" className="relative z-10 flex items-center" style={{ height: "100%" }}>
             <Image
               src="/images/logo.png"
               alt="La Sirba"
               width={160}
               height={55}
-              className="h-12 w-auto md:h-14"
+              className="w-auto object-contain"
+              style={{ maxHeight: "48px" }}
               priority
             />
           </Link>

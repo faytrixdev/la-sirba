@@ -16,7 +16,7 @@ function CategoryNav({
   onSelect: (id: string) => void;
 }) {
   return (
-    <div className="sticky top-16 z-30 border-b border-brun/10 bg-cream/95 backdrop-blur-sm">
+    <div className="sticky top-[72px] z-30 border-b border-brun/10 bg-cream/95 backdrop-blur-sm">
       <div className="mx-auto max-w-7xl px-4 md:px-6">
         <div className="no-scrollbar flex gap-2 overflow-x-auto py-3 md:flex-wrap md:justify-center">
           {categories.map((cat) => (
